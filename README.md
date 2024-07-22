@@ -60,7 +60,7 @@
     <li>API Authentication: Laravel Sanctum</li>
     <li>Authority and Role Management: Spatie Laravel-Permission</li>
     <li>Database: MySQL</li>
-    <li>Version Control: Go</li>
+    <li>Version Control: Git</li>
     <li>Other Tools: Composer, Artisan</li>
     <li>API Testing Tool: Postman</li>
     <li>Code Standards: PSR-12</li>
