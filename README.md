@@ -2,35 +2,42 @@
 <p>Bu proje, bir kütüphanenin kitap ve kullanıcı yönetimini kolaylaştırmak amacıyla geliştirilmiş sunucu uygulamasıdır. Kullanıcılar, kitapları ödünç alabilir, kitapların detaylarını görüntüleyebilir ve çeşitli kitap istatistiklerini inceleyebilirler. Yönetici ve yetkili kullanıcılar, kitap ve kullanıcı bilgilerini yönetebilir, yetkisiz erişim girişimlerini takip edebilir ve sistemin genel işleyişini kontrol edebilirler.</p> 
 
 <h1>Temel Özellikler</h1> 
-Kullanıcı Yönetimi: Kullanıcılar sisteme kaydolabilir, giriş yapabilir ve profil bilgilerini güncelleyebilir.
-Kitap Yönetimi: Kitap ekleme, güncelleme, silme ve kitap detaylarını görüntüleme işlemleri yapılabilir.
-Ödünç Alma ve İade: Kullanıcılar kitapları ödünç alabilir ve iade edebilirler. Her bir ödünç alma ve iade işlemi kaydedilir.
-Kitap Görüntüleme İstatistikleri: Hangi kitapların en çok görüntülendiği ve hangi kullanıcıların en çok kitap görüntülediği takip edilir.
-En Çok Ödünç Alınan Kitaplar: En popüler kitapların listesi oluşturulur.
-Kullanıcı Giriş Çıkış Logları: Kullanıcıların sisteme giriş ve çıkış zamanları kaydedilir.
-Yetkisiz Erişim Denemeleri: Yetkisiz erişim girişimleri kaydedilir ve bu girişimlere karşı kullanıcılar engellenebilir.
-Günlük, Haftalık ve Aylık İstatistikler: Günlük, haftalık ve aylık olarak kitap ödünç alma istatistikleri raporlanır.
-API Tabanlı Mimari: Laravel kullanılarak geliştirilen RESTful API ile frontend ve mobil uygulama entegrasyonları yapılabilir.
+<ul>
+    <li>Kullanıcı Yönetimi: Kullanıcılar sisteme kaydolabilir, giriş yapabilir ve profil bilgilerini güncelleyebilir.</li>
+    <li>Kitap Yönetimi: Kitap ekleme, güncelleme, silme ve kitap detaylarını görüntüleme işlemleri yapılabilir.</li>
+    <li>Ödünç Alma ve İade: Kullanıcılar kitapları ödünç alabilir ve iade edebilirler. Her bir ödünç alma ve iade işlemi kaydedilir.</li>
+    <li>Kitap Görüntüleme İstatistikleri: Hangi kitapların en çok görüntülendiği ve hangi kullanıcıların en çok kitap görüntülediği takip edilir.</li>
+    <li>En Çok Ödünç Alınan Kitaplar: En popüler kitapların listesi oluşturulur.</li>
+    <li>Kullanıcı Giriş Çıkış Logları: Kullanıcıların sisteme giriş ve çıkış zamanları kaydedilir.</li>
+    <li>Yetkisiz Erişim Denemeleri: Yetkisiz erişim girişimleri kaydedilir ve bu girişimlere karşı kullanıcılar engellenebilir.</li>
+    <li>Günlük, Haftalık ve Aylık İstatistikler: Günlük, haftalık ve aylık olarak kitap ödünç alma istatistikleri raporlanır.</li>
+    <li>API Tabanlı Mimari: Laravel kullanılarak geliştirilen RESTful API ile frontend ve mobil uygulama entegrasyonları yapılabilir.
+</li>
+</ul>
 
-Kullanılan Teknolojiler ve Araçlar
-Backend Framework: Laravel 11
-API Authentication: Laravel Sanctum
-Yetki ve Rol Yönetimi: Spatie Laravel-Permission
-Veritabanı: MySQL
-Versiyon Kontrol: Git
-Diğer Araçlar: Composer, Artisan
-API Test Aracı: Postman
-Veritabanı Doldurma: Seeder
-Kod Standartları: PSR-12
+<h1>Kullanılan Teknolojiler ve Araçlar</h1> 
+<ul>
+    <li>Backend Framework: Laravel 11</li>
+    <li>API Authentication: Laravel Sanctum</li>
+    <li>Yetki ve Rol Yönetimi: Spatie Laravel-Permission</li>
+    <li>Veritabanı: MySQL</li>
+    <li>Versiyon Kontrol: Git</li>
+    <li>Diğer Araçlar: Composer, Artisan</li>
+    <li>API Test Aracı: Postman</li>
+    <li>Kod Standartları: PSR-12</li>
+    
+</ul>
 
-Öne Çıkan Özellikler
-Güçlü Yetki Yönetimi: Spatie Laravel-Permission kullanılarak kullanıcı yetkileri ve roller detaylı bir şekilde yönetilir.
-Gelişmiş Loglama: Yetkisiz erişim denemeleri, kullanıcı giriş-çıkışları ve olağan dışı davranışlar detaylı olarak loglanır.
-Analiz ve Raporlama: Kitap ödünç alma ve görüntüleme istatistikleri raporlanarak analiz edilir.
+<h1>Öne Çıkan Özellikler</h1>
+<p>Güçlü Yetki Yönetimi: Spatie Laravel-Permission kullanılarak kullanıcı yetkileri ve roller detaylı bir şekilde yönetilir.</p>
+<p>Gelişmiş Loglama: Yetkisiz erişim denemeleri, kullanıcı giriş-çıkışları ve olağan dışı davranışlar detaylı olarak loglanır.</p>
+<p>Analiz ve Raporlama: Kitap ödünç alma ve görüntüleme istatistikleri raporlanarak analiz edilir.</p>
 
-Ekstra Özellikler
-IP Adresi Takibi: Kullanıcıların sistemdeki hareketleri IP adresi bazında takip edilir.
-Saldırı Önleme Mekanizması: Bir URL'ye aşırı istek yapan kullanıcıların geçici olarak erişimlerinin kısıtlanması sağlanır.
+<h1>Ekstra Özellikler</h1>
+<p>IP Adresi Takibi: Kullanıcıların sistemdeki hareketleri IP adresi bazında takip edilir.</p>
+<p>Saldırı Önleme Mekanizması: Bir URL'ye aşırı istek yapan kullanıcıların geçici olarak erişimlerinin kısıtlanması sağlanır.</p>
+
+
 
 Project Description
 This project is a server application developed to facilitate the book and user management of a library. Users can borrow books, view the details of books, and review various book statistics. Administrator and authorized users can manage books and user information, track unauthorized access attempts, and control the overall functioning of the system.
