@@ -1,7 +1,7 @@
-Proje Açıklaması
-Bu proje, bir kütüphanenin kitap ve kullanıcı yönetimini kolaylaştırmak amacıyla geliştirilmiş sunucu uygulamasıdır. Kullanıcılar, kitapları ödünç alabilir, kitapların detaylarını görüntüleyebilir ve çeşitli kitap istatistiklerini inceleyebilirler. Yönetici ve yetkili kullanıcılar, kitap ve kullanıcı bilgilerini yönetebilir, yetkisiz erişim girişimlerini takip edebilir ve sistemin genel işleyişini kontrol edebilirler.
+<h1>Proje Açıklaması</h1> 
+<p>Bu proje, bir kütüphanenin kitap ve kullanıcı yönetimini kolaylaştırmak amacıyla geliştirilmiş sunucu uygulamasıdır. Kullanıcılar, kitapları ödünç alabilir, kitapların detaylarını görüntüleyebilir ve çeşitli kitap istatistiklerini inceleyebilirler. Yönetici ve yetkili kullanıcılar, kitap ve kullanıcı bilgilerini yönetebilir, yetkisiz erişim girişimlerini takip edebilir ve sistemin genel işleyişini kontrol edebilirler.</p> 
 
-Temel Özellikler
+<h1>Temel Özellikler</h1> 
 Kullanıcı Yönetimi: Kullanıcılar sisteme kaydolabilir, giriş yapabilir ve profil bilgilerini güncelleyebilir.
 Kitap Yönetimi: Kitap ekleme, güncelleme, silme ve kitap detaylarını görüntüleme işlemleri yapılabilir.
 Ödünç Alma ve İade: Kullanıcılar kitapları ödünç alabilir ve iade edebilirler. Her bir ödünç alma ve iade işlemi kaydedilir.
