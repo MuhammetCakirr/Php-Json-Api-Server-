@@ -76,5 +76,7 @@
 <p>IP Address Tracking: Users' movements in the system are tracked based on their IP address.</p>
 <p>Attack Prevention Mechanism: Allows users who make excessive requests to a URL to temporarily restrict their access.</p>
 
+<img src="https://github.com/user-attachments/assets/458fe9eb-eca9-467e-89a0-806d6c83790b" >
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
