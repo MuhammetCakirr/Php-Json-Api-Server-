@@ -1,66 +1,82 @@
+<h1>Proje Açıklaması</h1> 
+<p>Bu proje, bir kütüphanenin kitap ve kullanıcı yönetimini kolaylaştırmak amacıyla geliştirilmiş sunucu uygulamasıdır. Kullanıcılar, kitapları ödünç alabilir, kitapların detaylarını görüntüleyebilir ve çeşitli kitap istatistiklerini inceleyebilirler. Yönetici ve yetkili kullanıcılar, kitap ve kullanıcı bilgilerini yönetebilir, yetkisiz erişim girişimlerini takip edebilir ve sistemin genel işleyişini kontrol edebilirler.</p> 
+
+<h1>Temel Özellikler</h1> 
+<ul>
+    <li>Kullanıcı Yönetimi: Kullanıcılar sisteme kaydolabilir, giriş yapabilir ve profil bilgilerini güncelleyebilir.</li>
+    <li>Kitap Yönetimi: Kitap ekleme, güncelleme, silme ve kitap detaylarını görüntüleme işlemleri yapılabilir.</li>
+    <li>Ödünç Alma ve İade: Kullanıcılar kitapları ödünç alabilir ve iade edebilirler. Her bir ödünç alma ve iade işlemi kaydedilir.</li>
+    <li>Kitap Görüntüleme İstatistikleri: Hangi kitapların en çok görüntülendiği ve hangi kullanıcıların en çok kitap görüntülediği takip edilir.</li>
+    <li>En Çok Ödünç Alınan Kitaplar: En popüler kitapların listesi oluşturulur.</li>
+    <li>Kullanıcı Giriş Çıkış Logları: Kullanıcıların sisteme giriş ve çıkış zamanları kaydedilir.</li>
+    <li>Yetkisiz Erişim Denemeleri: Yetkisiz erişim girişimleri kaydedilir ve bu girişimlere karşı kullanıcılar engellenebilir.</li>
+    <li>Günlük, Haftalık ve Aylık İstatistikler: Günlük, haftalık ve aylık olarak kitap ödünç alma istatistikleri raporlanır.</li>
+    <li>API Tabanlı Mimari: Laravel kullanılarak geliştirilen RESTful API ile frontend ve mobil uygulama entegrasyonları yapılabilir.
+</li>
+</ul>
+
+<h1>Kullanılan Teknolojiler ve Araçlar</h1> 
+<ul>
+    <li>Backend Framework: Laravel 11</li>
+    <li>API Authentication: Laravel Sanctum</li>
+    <li>Yetki ve Rol Yönetimi: Spatie Laravel-Permission</li>
+    <li>Veritabanı: MySQL</li>
+    <li>Versiyon Kontrol: Git</li>
+    <li>Diğer Araçlar: Composer, Artisan</li>
+    <li>API Test Aracı: Postman</li>
+    <li>Kod Standartları: PSR-12</li>
+    
+</ul>
+
+<h1>Öne Çıkan Özellikler</h1>
+<p>Güçlü Yetki Yönetimi: Spatie Laravel-Permission kullanılarak kullanıcı yetkileri ve roller detaylı bir şekilde yönetilir.</p>
+<p>Gelişmiş Loglama: Yetkisiz erişim denemeleri, kullanıcı giriş-çıkışları ve olağan dışı davranışlar detaylı olarak loglanır.</p>
+<p>Analiz ve Raporlama: Kitap ödünç alma ve görüntüleme istatistikleri raporlanarak analiz edilir.</p>
+
+<h1>Ekstra Özellikler</h1>
+<p>IP Adresi Takibi: Kullanıcıların sistemdeki hareketleri IP adresi bazında takip edilir.</p>
+<p>Saldırı Önleme Mekanizması: Bir URL'ye aşırı istek yapan kullanıcıların geçici olarak erişimlerinin kısıtlanması sağlanır.</p>
+
+<h1>Project Description</h1> 
+<p>This project is a server application developed to facilitate the book and user management of a library. Users can borrow books, view the details of books, and review various book statistics. Administrator and authorized users can manage books and user information, track unauthorized access attempts, and control the overall functioning of the system.</p> 
+
+<h1>Basic Features</h1> 
+<ul>
+    <li>User Management: Users can register to the system, log in, and update their profile information.< / li>
+    <li>Book Management: Adding, updating, deleting books and viewing book details can be performed.< / li>
+    <li>Borrowing and Return: Users can borrow and return books. Each borrowing and return transaction is recorded.< / li>
+    <li>Book Viewing Statistics: It keeps track of which books are viewed the most and which users view the most books.< / li>
+    <li>Most Borrowed Books: A list of the most popular books is created.< / li>
+    <li>User Login and Exit Logs: The login and exit times of users to the system are saved.< / li>
+    <li>Unauthorized Access Attempts: Unauthorized access attempts are recorded and users can be blocked against these attempts.< / li>
+    <li>Daily, Weekly and Monthly Statistics: Book borrowing statistics are reported daily, weekly and monthly.< / li>
+    <li>API-Based Architecture: Frontend and mobile application integrations can be made with the RESTful API developed using Laravel.
+< / li>
+</ul>
+
+<h1>Technologies and Tools Used</h1> 
+<ul>
+    <li>Backend Framework: Laravel 11</li>
+    <li>API Authentication: Laravel Sanctum</li>
+    <li>Authority and Role Management: Spatie Laravel-Permission</li>
+    <li>Database: MySQL</li>
+    <li>Version Control: Git</li>
+    <li>Other Tools: Composer, Artisan</li>
+    <li>API Testing Tool: Postman</li>
+    <li>Code Standards: PSR-12</li>
+    
+</ul>
+
+<h1>Highlights</h1>
+<p>Strong Authority Management: User permissions and roles are managed in detail using Spatie Laravel-Permission.</p>
+<p>Advanced Logging: Unauthorized access attempts, user log-ins and unusual behaviors are logged in detail.</p>
+<p>Analysis and Reporting: Book borrowing and viewing statistics are analyzed by reporting.</p>
+
+<h1>Additional Features</h1>
+<p>IP Address Tracking: Users' movements in the system are tracked based on their IP address.</p>
+<p>Attack Prevention Mechanism: Allows users who make excessive requests to a URL to temporarily restrict their access.</p>
+
+<img src="https://github.com/user-attachments/assets/458fe9eb-eca9-467e-89a0-806d6c83790b" >
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
