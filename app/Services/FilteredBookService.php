@@ -4,13 +4,13 @@ namespace App\Services;
 
 use App\Repositories\EloquentFilteredBookRepository;
 use Illuminate\Support\Collection;
-
+use App\Models\Book;
 class FilteredBookService
 {
     /**
      * Summary of filteredBooksRouting
      * @param Collection $filters
-     * 
+     * @return Collection<Book>
      */
     public function goToRepository(Collection $filters){
 
@@ -23,7 +23,7 @@ class FilteredBookService
 
             $value = $filters->get($firstKey);
 
-            if (filled($filters) === "author_id") 
+            if (filled($filters) == "author_id") 
             {
 
                 $books= $repository->getAuthorAndBookData($filters->get('author_id'));
@@ -31,7 +31,7 @@ class FilteredBookService
                 
             }
 
-            if (filled($filters) === "genres") 
+            if (filled($filters) == "genres") 
             {
                 $books= $repository->getGenreAndBookData($firstKey,$value);
                 return $books;
