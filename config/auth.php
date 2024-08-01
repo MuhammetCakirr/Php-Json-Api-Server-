@@ -70,6 +70,8 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        App\Providers\BookServiceProvider::class,
 
         // 'users' => [
         //     'driver' => 'database',
@@ -95,7 +97,10 @@ return [
     | quickly generating a very large amount of password reset tokens.
     |
     */
-
+    'aliases' => [
+        // ...
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+    ],
     'passwords' => [
         'users' => [
             'provider' => 'users',

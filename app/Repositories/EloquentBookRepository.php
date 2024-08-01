@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Jobs\ExcelQueue;
 use App\Models\Book;
 use App\Models\BookViewLog;
 use App\Models\Genre;
@@ -21,8 +22,11 @@ class EloquentBookRepository implements BookRepositoryInterface
             'ip_address' => $ipAddress,
             'viewed_at' => now(),
         ]);
+        $book = Book::where('id', $id)->with('genres', 'author')->first();
+        // ->delay(now()->addSeconds(5))
+        ExcelQueue::dispatch();
 
-        return Book::where('id', $id)->with('genres', 'author')->firstOrFail();
+        return $book;
     }
 
     public function createBook($attributes)

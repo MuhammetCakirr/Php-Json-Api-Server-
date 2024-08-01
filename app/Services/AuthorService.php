@@ -22,6 +22,7 @@ class AuthorService
     public function update($id, array $attributes)
     {
         $IsExistingAuthor = $this->isExistingAuthorId($id);
+
         if ($IsExistingAuthor == true) {
             return $this->repository->updateAuthor($id, $attributes);
         } else {

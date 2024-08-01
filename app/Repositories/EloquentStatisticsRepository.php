@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Models\Book;
 use App\Models\BookViewLog;
 use App\Models\UserBook;
 use Carbon\Carbon;
@@ -10,7 +11,7 @@ class EloquentStatisticsRepository
 {
     public function getMostReceivedBook()
     {
-        $books = UserBook::select('book_id')
+        return UserBook::query()->select('book_id')
             ->selectRaw('count(*) as total_received')
             ->groupBy('book_id')
             ->orderBy('total_received', 'desc')
@@ -23,19 +24,17 @@ class EloquentStatisticsRepository
                     'total_received' => $item->total_received,
                 ];
             });
-
-        return $books;
     }
 
-    public function getMostTakeBookUser()
+    public function getMostTakeBookUser(): \Illuminate\Http\JsonResponse
     {
 
-        $users = UserBook::select('user_id')
+        $users = UserBook::query()->select('user_id')
             ->selectRaw('count(*) as total_books')
             ->groupBy('user_id')
             ->orderBy('total_books', 'desc')
             ->limit(10)
-            ->with('user', 'book')
+            ->with(['user', 'book'])
             ->get();
 
         if ($users->isEmpty()) {
@@ -60,10 +59,10 @@ class EloquentStatisticsRepository
         ]);
     }
 
-    public function getDailyStatistics()
+    public function getDailyStatistics(): \Illuminate\Http\JsonResponse
     {
         $today = Carbon::today();
-        $books = UserBook::whereDate('dateoftake', $today)
+        $books = UserBook::query()->whereDate('dateoftake', $today)
             ->with('book')
             ->get();
 
@@ -87,11 +86,11 @@ class EloquentStatisticsRepository
 
     }
 
-    public function getWeeklyStatistics()
+    public function getWeeklyStatistics(): \Illuminate\Http\JsonResponse
     {
         $today = Carbon::today();
 
-        $startOfWeek = Carbon::now('UTC')->startOfWeek();
+        $startOfWeek = now()->startOfWeek();
         $endOfWeek = Carbon::now('UTC')->endOfWeek();
         $books = UserBook::whereBetween('dateoftake', [$startOfWeek, $endOfWeek])
             ->with('book')
@@ -116,7 +115,7 @@ class EloquentStatisticsRepository
         ]);
     }
 
-    public function getMonthlyStatistics()
+    public function getMonthlyStatistics(): \Illuminate\Http\JsonResponse
     {
         $startOfMonth = Carbon::now('UTC')->startOfMonth();
         $endOfMonth = Carbon::now('UTC')->endOfMonth();
@@ -144,7 +143,7 @@ class EloquentStatisticsRepository
         ]);
     }
 
-    public function getMostViewedBook()
+    public function getMostViewedBook(): \Illuminate\Http\JsonResponse
     {
         $books = BookViewLog::select('book_id', \DB::raw('count(*) as view_count'))
             ->groupBy('book_id')
@@ -154,7 +153,7 @@ class EloquentStatisticsRepository
 
         $bookDetails = $books->map(function ($log) {
             return [
-                'book' => \App\Models\Book::find($log->book_id),
+                'book' => Book::find($log->book_id),
                 'view_count' => $log->view_count,
             ];
         });

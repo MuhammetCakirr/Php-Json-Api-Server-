@@ -8,8 +8,9 @@ class StatisticsController extends Controller
 {
     protected $repo;
 
-    public function __construct(EloquentStatisticsRepository $eloquentStatisticsRepository)
-    {
+    public function __construct(
+        EloquentStatisticsRepository $eloquentStatisticsRepository,
+    ) {
         $this->repo = $eloquentStatisticsRepository;
     }
 

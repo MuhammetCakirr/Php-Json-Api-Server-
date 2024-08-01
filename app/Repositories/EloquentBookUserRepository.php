@@ -2,7 +2,9 @@
 
 namespace App\Repositories;
 
+use App\Jobs\CreateContractForm;
 use App\Models\UserBook;
+use Carbon\Carbon;
 
 class EloquentBookUserRepository implements BookUserRepositoryInterface
 {
@@ -20,7 +22,16 @@ class EloquentBookUserRepository implements BookUserRepositoryInterface
 
     public function createBookUser(array $attributes)
     {
-        return UserBook::create($attributes);
+        $userBook = UserBook::create($attributes);
+
+        $userWithBook = UserBook::query()->with(['user', 'book'])->find($userBook->id);
+
+        $dateOfTake = Carbon::parse($userWithBook->dateoftake);
+        $oneMonthLater = $dateOfTake->addMonth();
+
+        CreateContractForm::dispatch($userWithBook->user->name, $userWithBook->book->title, $userWithBook->dateoftake, $oneMonthLater);
+
+        return $userWithBook;
     }
 
     public function updateBookUser($id, array $attributes)

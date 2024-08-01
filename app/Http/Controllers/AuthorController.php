@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AuthorRequest;
-use App\Repositories\AuthorRepositoryInterface;
+use App\Repositories\EloquentAuthorRepository;
 use App\Services\AuthorService;
 
 class AuthorController extends Controller
 {
-    protected $service;
+    protected AuthorService $service;
 
     protected $repository;
 
-    public function __construct(AuthorService $authorService, AuthorRepositoryInterface $authorRepositoryInterface)
+    public function __construct(AuthorService $authorService, EloquentAuthorRepository $authorRepositoryInterface)
     {
         $this->service = $authorService;
         $this->repository = $authorRepositoryInterface;
@@ -28,7 +28,7 @@ class AuthorController extends Controller
     public function show($id)
     {
         $author = $this->service->show($id);
-        if ($author == '400' || $author == null || empty($author)) {
+        if ($author == '400' || $author === null || empty($author)) {
             $data = [
                 'status' => 400,
                 'message' => 'There is no author belonging to this information.',
@@ -50,6 +50,7 @@ class AuthorController extends Controller
     {
 
         $newauthor = $this->service->create($authorRequest->validated());
+
         $data = [
             'status' => 200,
             'message' => 'Author was successfully created.',
@@ -63,6 +64,7 @@ class AuthorController extends Controller
     public function update($id, AuthorRequest $authorRequest)
     {
         $updatedauthor = $this->service->update($id, $authorRequest->validated());
+
         if ($updatedauthor == null || $updatedauthor == '400' || empty($updatedauthor)) {
             $data = [
                 'status' => 400,

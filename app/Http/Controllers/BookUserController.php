@@ -13,8 +13,10 @@ class BookUserController extends Controller
 
     protected $repository;
 
-    public function __construct(BookUserService $bookUserService, BookUserRepositoryInterface $bookUserRepositoryInterface)
-    {
+    public function __construct(
+        BookUserService $bookUserService,
+        BookUserRepositoryInterface $bookUserRepositoryInterface
+    ) {
         $this->service = $bookUserService;
         $this->repository = $bookUserRepositoryInterface;
     }
@@ -29,6 +31,7 @@ class BookUserController extends Controller
     public function show($id)
     {
         $bookuser = $this->service->showById($id);
+
         if ($bookuser == '400' || $bookuser == null) {
             $data = [
                 'status' => 400,
@@ -47,7 +50,9 @@ class BookUserController extends Controller
 
     public function create(BookUserCreateRequest $bookusercreaterequest)
     {
+
         $createdvalue = $this->service->create($bookusercreaterequest->validated());
+
         $data = [
             'status' => 200,
             'message' => 'User-Book was successfully created.',

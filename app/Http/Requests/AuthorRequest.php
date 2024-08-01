@@ -42,7 +42,11 @@ class AuthorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:3|max:255',
+            'name' => [
+                'required',
+                'min:3',
+                'max:255',
+            ],
             'biography' => 'required|min:3|max:255',
             'dateofbirth' => 'required|date|before:today',
         ];
